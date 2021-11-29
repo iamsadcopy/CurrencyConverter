@@ -1,16 +1,8 @@
-//
-//  ContentView.swift
-//  CurrencyConverter
-//
-//  Created by Pavel Moskvichev on 29.11.2021.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Currency()
     }
 }
 
