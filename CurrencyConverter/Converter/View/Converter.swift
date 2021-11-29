@@ -13,6 +13,7 @@ struct Converter: View {
         
         VStack {
             Spacer()
+            Text("Конвертатор валют").font(.custom("Helvetica Neue", size: 30))
             HStack {
                 ValutePicker(selected: $baseValue).padding()
                 ValutePicker(selected: $convertValue).padding()
@@ -78,5 +79,6 @@ struct Converter: View {
 struct Converter_Previews: PreviewProvider {
     static var previews: some View {
         Converter()
+.previewInterfaceOrientation(.portrait)
     }
 }
