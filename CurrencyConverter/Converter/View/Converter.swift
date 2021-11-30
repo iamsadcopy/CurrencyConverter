@@ -13,7 +13,7 @@ struct Converter: View {
         
         VStack {
             Spacer()
-            Text("Конвертатор валют").font(.custom("Helvetica Neue", size: 30))
+            Text("Конвертер валют").font(.custom("Helvetica Neue", size: 30))
             HStack {
                 ValutePicker(selected: $baseValue).padding()
                 ValutePicker(selected: $convertValue).padding()

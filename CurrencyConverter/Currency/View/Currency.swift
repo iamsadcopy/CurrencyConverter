@@ -12,7 +12,7 @@ struct Currency: View {
             VStack(alignment: .center, spacing: 6) {
                 Spacer()
                 VStack {
-                    Text("Конвертор валют")
+                    Text("Курс валют")
                     Text("Базовая валюта: Рубль")
                 }.font(.custom("Helvetica Neue", size: 30))
                 Spacer()
@@ -52,7 +52,7 @@ struct Currency: View {
             }.tag(1)
             
             Converter().tabItem {
-                Text("Конвертатор валют")
+                Text("Конвертер валют")
             }.tag(2)
         }
         .accentColor(.black)
@@ -72,9 +72,9 @@ struct Currency: View {
         let valueNow = self.currency?.Valute[valute]?.Value ?? 1.0
         let valueYesterday = self.currency?.Valute[valute]?.Previous ?? 1.0
         if valueNow >= valueYesterday {
-            return String(format: "%.2f", valueYesterday / valueNow)
+            return "+" + String(format: "%.3f", valueYesterday / valueNow)
         } else {
-            return "-" + String(format: "%.2f", valueYesterday / valueNow)
+            return "-" + String(format: "%.3f", valueYesterday / valueNow)
         }
         
     }
